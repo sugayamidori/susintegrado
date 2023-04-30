@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/azul_piscina"
+tools:context=".TelaCadastro">
+
+<TextView
+    android:id="@+id/text_cadastro"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:text="@string/cadastro"
+    android:textSize="30dp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+<View
+    android:id="@+id/ContainerComponentsMaior"
+    style="@style/ContainerComponentsMaior"
+    android:layout_marginTop="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text_cadastro"/>
+
+<EditText
+    android:id="@+id/edit_name"
+    style="@style/Edit_Text"
+    android:hint="@string/nome"
+    android:drawableRight="@drawable/ic_person"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+    app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+    app:layout_constraintTop_toTopOf="@id/ContainerComponentsMaior" />
+
+<EditText
+    android:id="@+id/edit_telefone"
+    style="@style/Edit_Text"
+    android:hint="@string/telefone"
+    android:drawableRight="@drawable/ic_telefone"
+    android:inputType="phone"
+    app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+    app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+    app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+<EditText
+    android:id="@+id/edit_email"
+    style="@style/Edit_Text"
+    android:drawableRight="@drawable/ic_email"
+    android:hint="Email"
+    android:inputType="textEmailAddress"
+    app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+    app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+    app:layout_constraintTop_toBottomOf="@id/edit_telefone" />
+
+<EditText
+    android:id="@+id/edit_senha"
+    style="@style/Edit_Text"
+    android:drawableRight="@drawable/ic_eye"
+    android:hint="@string/senha"
+    android:inputType="numberPassword"
+    app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+    app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+    app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+
+    <TextView
+        android:id="@+id/text_tipo_de_acesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="500dp"
+        android:text="@string/tipo_de_acesso"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha" />
+
+    <CheckBox
+        android:id="@+id/checkbox_profissional"
+        style="@style/CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="200dp"
+        android:text="@string/checkbox_profissional"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha" />
+
+    <CheckBox
+        android:id="@+id/checkbox_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox_usuario"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="228dp"
+        style="@style/CheckBox"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponentsMaior"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponentsMaior"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_profissional"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_criar_cadastro"
+        style="@style/Button"
+        android:text="@string/criar_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerComponentsMaior"/>
+
+
+    <TextView
+        android:id="@+id/voltar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="680dp"
+        android:text="@string/voltar_login"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
