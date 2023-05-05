@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.susintegrado.databinding.ActivityMainBinding
 import android.widget.Button
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btEntrar.setOnClickListener {
+            val database = Firebase.database
+            val myRef = database.getReference("message")
+
+            myRef.setValue("Hello, World!")
+
             val navegarAcessoProfissional = Intent(this, AcessoProfissional::class.java)
             startActivity(navegarAcessoProfissional)
             }
