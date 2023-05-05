@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292481797265",
+    "project_id": "susintegrado",
+    "storage_bucket": "susintegrado.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292481797265:android:a37287e89ea3fe3f554330",
+        "android_client_info": {
+          "package_name": "com.example.susintegrado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292481797265-6debd4dedtcqcg79h3chogs6mpk1c7k9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUTwktGidGoXUn9MRsYsGAU0xULKgAue8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292481797265-6debd4dedtcqcg79h3chogs6mpk1c7k9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
