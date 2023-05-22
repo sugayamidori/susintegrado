@@ -13,8 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -36,12 +34,6 @@ class MainActivity : AppCompatActivity() {
             val navegarTelaCadastro = Intent(this, TelaCadastro::class.java)
             startActivity(navegarTelaCadastro)
         }
-        /*val buttEntrar = binding.btEntrar
-        buttEntrar.setOnClickListener {
-            val navegarAcessoProfissional = Intent(this, AcessoProfissional::class.java)
-            startActivity(navegarAcessoProfissional)
-            }*/
-
 
     }
     }

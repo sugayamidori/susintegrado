@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Susintegrado"
         tools:targetApi="31">
         <activity
+            android:name=".cadastro_hospitais"
+            android:exported="false" />
+        <activity
+            android:name=".card_view"
+            android:exported="false" />
+        <activity
             android:name=".AcessoProfissional"
             android:exported="false" />
         <activity

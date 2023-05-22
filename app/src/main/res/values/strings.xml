@@ -18,7 +18,6 @@
     <string name="telefone">Telefone</string>
 
     <!--AcessoProfissional-->
-    <string name="acesso_profissional">ACESSO AO PROFISSIONAL DA SAÚDE</string>
     <string name="numero_cartao">Nº do cartão do SUS</string>
     <string name="cadastro_cartao">Caso não tenha cadastro, clique aqui</string>
     <string name="dados_usuário">DADOS DO USUÁRIO</string>

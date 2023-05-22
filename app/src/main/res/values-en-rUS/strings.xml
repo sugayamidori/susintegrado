@@ -17,7 +17,6 @@
     <string name="telefone">Number</string>
 
         <!--AcessoProfissional-->
-    <string name="acesso_profissional">ACCESS TO HEALTH PROFESSIONALS</string>
     <string name="numero_cartao">SUS card number</string>
     <string name="cadastro_cartao">In case of not being cadastred, click here</string>
     <string name="dados_usuário">USER DATA</string>

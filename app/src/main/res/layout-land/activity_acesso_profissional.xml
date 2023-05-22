@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/acesso_profissional"
+        android:text="acesso_profissional"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/azul_escuro"
