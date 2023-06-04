@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_piscina"
+    tools:context=".card_ubs">
+
+    <TextView
+        android:id="@+id/text_ubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/ubs"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_ubs" />
+
+    <TextView
+        android:id="@+id/text_conceito_ubs"
+        android:layout_width="336dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/conceito_ubs"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents" />
+
+    <TextView
+        android:id="@+id/text_locaisUbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locaisUbs"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/nome_ubs"
+        style="@style/Edit_Text"
+        android:hint="Nome da UBS"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_locaisUbs"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_inserir"
+        style="@style/Button"
+        android:text="@string/inserir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome_ubs"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_ver_lista"
+        style="@style/Button"
+        android:text="@string/ver_lista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_inserir"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

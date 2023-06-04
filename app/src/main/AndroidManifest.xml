@@ -12,10 +12,18 @@
         android:theme="@style/Theme.Susintegrado"
         tools:targetApi="31">
         <activity
-            android:name=".cadastro_hospitais"
+            android:name=".emp_list_item"
             android:exported="false" />
         <activity
-            android:name=".card_view"
+            android:name=".lista"
+            android:exported="false" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.Susintegrado.NoActionBar" />
+        <activity
+            android:name=".card_ubs"
             android:exported="false" />
         <activity
             android:name=".AcessoProfissional"

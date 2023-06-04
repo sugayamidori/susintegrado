@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -25,6 +26,22 @@ class TelaCadastro : AppCompatActivity() {
     //adicionei vendo o vídeo para cadastro com Firebase
     private lateinit var auth: FirebaseAuth;
 
+    //função para criar usuário e senha
+    private fun criarUsuarioESenha (email: String, senha: String){
+        auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(this) {
+            task ->
+            if (task.isSuccessful){
+                Toast.makeText(baseContext, "Cadastro efetuado",
+                    Toast.LENGTH_SHORT).show()
+                limparCampos()
+            } else {
+                Toast.makeText(baseContext, "Usuário já cadastrado",
+                    Toast.LENGTH_SHORT).show()
+
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTelaCadastroBinding.inflate(layoutInflater)
@@ -39,8 +56,16 @@ class TelaCadastro : AppCompatActivity() {
             navegarAcessoProfissional.putExtra("EXTRA_EDIT_NAME", name)
             startActivity(navegarAcessoProfissional)
 
-            //adicionei vendo o vídeo para cadastro com Firebase
+            if (TextUtils.isEmpty(binding.btCriarCadastro.text)){
+                binding.editEmail.error = "Informe o email para cadastro"
+            } else if (TextUtils.isEmpty(binding.editSenha.text)){
+                binding.editSenha.error = "Informe a senha para cadastro"
+            } else {
+                criarUsuarioESenha(binding.editEmail.text.toString(),
+                binding.editSenha.text.toString())
+            }
 
+            //adicionei vendo o vídeo para cadastro com Firebase
                 auth.signInWithEmailAndPassword(binding.editEmail.text.toString(),binding.editSenha.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
@@ -53,12 +78,13 @@ class TelaCadastro : AppCompatActivity() {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCustomToken:failure", task.exception)
-                            Toast.makeText(baseContext, "Erro de autenticação",
+                            Toast.makeText(baseContext, "Usuário ainda sem autenticação",
                                 Toast.LENGTH_SHORT).show()
                             //updateUI(null)
                         }
                     }
-
+            //método para limpar os campos
+            limparCampos()
         }
         //adicionei vendo o vídeo para cadastro com Firebase
         binding.voltarLogin.setOnClickListener{
@@ -68,6 +94,12 @@ class TelaCadastro : AppCompatActivity() {
         //adicionei vendo o vídeo para cadastro com Firebase
         auth = Firebase.auth
 
+
+    }
+
+    private fun limparCampos() {
+        binding.editEmail.text.clear()
+        binding.editSenha.text.clear()
     }
 
     public override fun onStart() {

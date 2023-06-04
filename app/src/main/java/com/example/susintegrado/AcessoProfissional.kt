@@ -17,6 +17,11 @@ class AcessoProfissional : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        binding.btUbs.setOnClickListener{
+            val irCardUbs = Intent (this, card_ubs :: class.java)
+            startActivity(irCardUbs)
+        }
+
         binding.voltarLogin.setOnClickListener {
             val voltarLogin = Intent(this, MainActivity::class.java)
             startActivity(voltarLogin)
